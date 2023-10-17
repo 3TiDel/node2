@@ -39,10 +39,16 @@
   else
     site = {}
 
+  li = []
   for lang from lang_set
     fp = join pwd,lang,'i18n.nt'
     if existsSync fp
       g = load fp
+      console.log g.qHolder
+      if g.qHolder.trim().indexOf(' ') < 0
+        console.log '>', lang
+        li.push lang
+        console.log li
     else
       g = {}
     write(
