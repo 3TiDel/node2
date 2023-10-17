@@ -1,7 +1,7 @@
 #!/usr/bin/env coffee
 
 > @8n/lang:LANG
-  @8n/lang/nospace.js
+  @8n/lang/NOSPACE.js
   @w5/utf8/utf8e.js
   path > join
   @w5/write
@@ -45,11 +45,16 @@
     fp = join pwd,lang,'i18n.nt'
     if existsSync fp
       g = load fp
-      console.log g.qHolder
-      if g.qHolder.trim().indexOf(' ') < 0
-        console.log '>', lang
-        li.push lang
-        console.log li
+      for [k,v] from Object.entries(g)
+        g[k] = v.replace(
+          /(\s)?<br\s+([^\/>]+)>(\s)?/g
+          (_,pre,s,after)=>
+            if NOSPACE.has lang
+              pre = after = ''
+            else
+              pre = after = ' '
+            pre+'${'+s+'}'+after
+        ).trim()
     else
       g = {}
     write(
