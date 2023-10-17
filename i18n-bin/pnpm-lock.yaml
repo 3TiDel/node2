@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@8n/lang':
-    specifier: ^0.0.7
-    version: 0.0.7
+    specifier: ^0.0.8
+    version: 0.0.8
   '@8n/nt':
     specifier: ^0.0.12
     version: 0.0.12
@@ -29,8 +29,8 @@ dependencies:
 
 packages:
 
-  /@8n/lang@0.0.7:
-    resolution: {integrity: sha512-iY8zaHXyGo4tk/9FUbG1qHKg46aROF2m9jlSJmVr0oVudWWY3hjIoIKvN8RzOVv+noc1LwOOWljFN0lsc00vIw==}
+  /@8n/lang@0.0.8:
+    resolution: {integrity: sha512-gRcNy0BPmzVSorZCmuZvUCM3uDqoHNQgLwHFm4V6FvbIb9/Ht6kq/9HWsL0j2oJcDo/tCmBNlJVDaz10u06Onw==}
     dependencies:
       '@w5/uridir': 0.0.1
     dev: false

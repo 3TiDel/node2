@@ -1,6 +1,7 @@
 #!/usr/bin/env coffee
 
 > @8n/lang:LANG
+  @8n/lang/nospace.js
   @w5/utf8/utf8e.js
   path > join
   @w5/write
