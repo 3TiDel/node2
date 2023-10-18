@@ -71,7 +71,7 @@ svelte = (txt)=>
       var_li.push i+'$'
       dict_li.push i+':'+i+'$'
 
-    js.push "`var #{var_li.join(',')};onMount(onI18n(o=>({#{dict_li.join(',')}}=o)))`"
+    js.push "`var #{var_li.join(',')}='';onMount(onI18n(o=>({#{dict_li.join(',')}}=o)))`"
     r[script_line] += js.join(';')
 
   # console.log(r.join('\n'))
