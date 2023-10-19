@@ -1,10 +1,10 @@
 #!/usr/bin/env coffee
 
-> ./conf > ROOT
+> ./conf.js > ROOT
   @8n/lang/NOSPACE.js
   fs > readdirSync rmSync existsSync
   path > join
-  ./NodeModules:@ > node_modules
+  ./NodeModules.js:@ > node_modules
   @8n/nt/load.js
   @w5/write
   @w5/utf8/utf8e.js

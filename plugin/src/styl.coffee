@@ -3,8 +3,8 @@
 > @w5/write
   fs > existsSync
   path > join
-  ./conf > ROOT
-  ./NodeModules:@ > node_modules
+  ./conf.js > ROOT
+  ./NodeModules.js:@ > node_modules
 
 export default =>
   STYL = []

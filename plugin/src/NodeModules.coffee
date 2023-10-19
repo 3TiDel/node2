@@ -1,5 +1,5 @@
 #!/usr/bin/env coffee
-> ./conf > ROOT
+> ./conf.js > ROOT
   path > join
   @w5/read
 
