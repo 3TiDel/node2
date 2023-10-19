@@ -28,15 +28,21 @@ cacheNt = cache load
   kli = []
   vli = []
 
+  exist = new Set Object.keys to_nt
+
   for [k,v] from Object.entries from_nt
     hash = hash128(v)
-    if k of to_nt
+    if exist.has k
+      exist.delete k
       pre = mget(k)
       if pre and u8eq pre,hash
         continue
     mset k,hash
     kli.push k
     vli.push v
+
+  for i from exist
+    delete to_nt[i]
 
   {length} = vli
   if length
