@@ -54,6 +54,7 @@ cacheNt = cache load
       bar.log from_lang+' → '+to_lang+' '+vli[n]+' → '+to
       ++n
 
+  if length or exist.size
     dump(
       join dir, to_lang, relpath
       to_nt
