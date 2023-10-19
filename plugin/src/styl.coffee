@@ -15,7 +15,7 @@ export default =>
       STYL.push "@import '#{fp}'"
 
   STYL = STYL.join '\n'
-  console.log '\n# styl\n'
+  console.log '# styl\n'
 
   console.log STYL
   write(
