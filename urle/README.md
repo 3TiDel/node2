@@ -1,23 +1,23 @@
 [‼️]: ✏️README.mdt
 
-# @w5/urle
+# @8n/urle
 
 [test/main.coffee](./test/main.coffee) :
 
 ```coffee
 #!/usr/bin/env coffee
 
-> @w5/urle
+> @8n/urle
 #   @w5/uridir
 #   path > join
 
 # ROOT = uridir(import.meta)
 
-console.log await urle 123
+console.log urle new Uint8Array [ 1, 3, 123]
 ```
 
 output :
 
 ```
-123
+AmQ
 ```
