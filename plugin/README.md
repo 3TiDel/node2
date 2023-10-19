@@ -1,13 +1,13 @@
 [‼️]: ✏️README.mdt
 
-# @w5/plugin
+# @8n/plugin
 
 [test/main.coffee](./test/main.coffee) :
 
 ```coffee
 #!/usr/bin/env coffee
 
-> @w5/plugin
+> @8n/plugin
 #   @w5/uridir
 #   path > join
 
@@ -19,5 +19,5 @@ console.log await plugin 123
 output :
 
 ```
-123
+./out.txt
 ```
