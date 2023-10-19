@@ -1,6 +1,6 @@
 {
   "name": "@8n/plugin",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "repository": "https://github.com/i18n-site/node.git",
   "homepage": "https://github.com/i18n-site/node/tree/main/plugin",
   "author": "i18n.site@gmail.com",
@@ -10,7 +10,7 @@
     "./*": "./lib/*"
   },
   "bin": {
-    "plugin": "./lib/index.js"
+    "plugin": "./lib/bin.js"
   },
   "files": [
     "lib/*"
