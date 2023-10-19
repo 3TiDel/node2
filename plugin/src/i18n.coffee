@@ -13,6 +13,7 @@
   @w5/u8 > u8eq
   @8n/lang:LANG
   @w5/xxhash3-wasm > hash128
+  @w5/snake > SNAKE
 #   @w5/utf8/utf8d.js
 #
 # decode = (bin)=>
@@ -115,7 +116,7 @@ export default main = =>
       'export const HASH = '+ JSON.stringify(lang_fp, null, 2)
     ].concat(
       keys.map(
-        (i,p)=>"export const $#{i}=#{p}"
+        (i,p)=>"export const #{SNAKE i}=#{p}"
       )
     ).join('\n')
   )
