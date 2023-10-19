@@ -1,3 +1,5 @@
+#!/usr/bin/env coffee
+
 > ./i18n.js
   ./styl.js
 
