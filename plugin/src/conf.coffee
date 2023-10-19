@@ -3,4 +3,4 @@
 > @w5/uridir
   path > dirname
 
-export ROOT = dirname uridir(import.meta)
+export ROOT = process.cwd()
