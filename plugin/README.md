@@ -19,5 +19,10 @@ console.log await plugin 123
 output :
 
 ```
-./out.txt
+
+# styl
+
+
+
+# i18n
 ```

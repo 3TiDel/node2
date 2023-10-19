@@ -13,7 +13,6 @@
   @w5/u8 > u8eq
   @8n/lang:LANG
   @w5/xxhash3-wasm > hash128
-  json5
 #   @w5/utf8/utf8d.js
 #
 # decode = (bin)=>
