@@ -67,7 +67,7 @@ export default main = =>
   await i18n I18N
   + keys
 
-  lang_fp = []
+  lang_fp = {}
 
   for [lang, lang_name] from LANG
     fp = join(I18N,lang,'i18n.nt')
