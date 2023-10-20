@@ -1,6 +1,6 @@
 {
   "name": "@8n/deps",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": "https://github.com/i18n-site/node.git",
   "homepage": "https://github.com/i18n-site/node/tree/main/deps",
   "author": "i18n.site@gmail.com",
@@ -12,7 +12,9 @@
   "files": [
     "lib/*"
   ],
-  "devDependencies": {},
+  "devDependencies": {
+    "@w5/uridir": "^0.0.1"
+  },
   "scripts": {},
   "type": "module",
   "dependencies": {

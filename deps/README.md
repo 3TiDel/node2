@@ -8,12 +8,11 @@
 #!/usr/bin/env coffee
 
 > @8n/deps
-#   @w5/uridir
-#   path > join
+  @w5/uridir
 
-# ROOT = uridir(import.meta)
+ROOT = uridir(import.meta)
 
-console.log await deps 123
+console.log deps ROOT
 ```
 
 output :
