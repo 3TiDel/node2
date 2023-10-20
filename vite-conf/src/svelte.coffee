@@ -3,6 +3,13 @@
   @w5/snake > SNAKE
   chalk
 
+findRenderWords = (str)=>
+  regex = /\b(\w+)\$\.(render)/g
+  matches = []
+  while match = regex.exec(str)
+    matches.push match[1]
+  return matches
+
 {greenBright} = chalk
 
 IMPORT_onMount = 1
@@ -32,6 +39,8 @@ svelte = (txt)=>
           r[script_line] = r[script_line]+import_li.join(';')
         in_script = false
       else
+        for i from findRenderWords(line)
+          pug_i18n.add i
         if line.startsWith 'onMount '
           auto_import.add IMPORT_onMount
         if line.startsWith 'onI18n '
@@ -53,6 +62,7 @@ svelte = (txt)=>
             pug_i18n.add s1
             ' {@html '+s1+'$}'
         )
+
     else if line.startsWith '<script'
       in_script = true
       script_line = pos
