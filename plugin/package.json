@@ -1,6 +1,6 @@
 {
   "name": "@8n/plugin",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "repository": "https://github.com/i18n-site/node.git",
   "homepage": "https://github.com/i18n-site/node/tree/main/plugin",
   "author": "i18n.site@gmail.com",
@@ -19,7 +19,7 @@
   "scripts": {},
   "type": "module",
   "dependencies": {
-    "@8n/i18n": "^0.0.12",
+    "@8n/i18n": "^0.0.13",
     "@8n/lang": "^0.0.9",
     "@8n/nt": "^0.0.12",
     "@8n/urle": "^0.0.1",
