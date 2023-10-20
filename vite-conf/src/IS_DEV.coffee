@@ -1,4 +1,4 @@
 #!/usr/bin/env coffee
 
-export process.env.NODE_ENV!='production'
+export default process.env.NODE_ENV!='production'
 

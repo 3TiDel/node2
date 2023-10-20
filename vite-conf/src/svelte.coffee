@@ -2,6 +2,8 @@
   @w5/read
   @w5/snake > SNAKE
   chalk
+  ./IS_DEV.js
+  path > dirname
 
 findRenderWords = (str)=>
   regex = /\b(\w+)\$\.(render)/g
@@ -20,11 +22,10 @@ IMPORT = {}
 IMPORT[IMPORT_onMount] = 'import {onMount} from \'svelte\''
 IMPORT[IMPORT_onI18n] = 'import onI18n from \'@8p/lang/onMount.js\''
 
-
-svelte = (txt)=>
+svelte = (txt, fp, rfp)=>
   r = []
 
-  + in_script, in_pug, script_line, in_style
+  + in_script, in_pug, script_line, in_style, dir
 
   pug_i18n = new Set
   auto_import = new Set
@@ -33,6 +34,13 @@ svelte = (txt)=>
     if in_style
       if line.startsWith '</style>'
         in_style = false
+      else
+        if IS_DEV and rfp.startsWith 'node_modules/'
+          if not dir
+            console.log rfp
+            dir = '/@fs/'+dirname(fp)+'/'
+
+          line = line.replace('\'./','\''+dir).replace('"./','"'+dir)
     else if line.startsWith '<style'
       in_style = true
     else if in_script
@@ -109,9 +117,10 @@ svelte = (txt)=>
   sveltePreprocess.unshift(
     markup: ({content, filename})=>
       if filename.endsWith '.svelte'
-        console.log greenBright filename.slice(len)
+        relpeath = filename.slice(len)
+        console.log greenBright relpeath
         return {
-          code: svelte(content, filename)
+          code: svelte(content, filename, relpeath)
         }
       return
   )
