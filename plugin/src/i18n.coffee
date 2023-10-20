@@ -67,7 +67,6 @@ export default main = =>
   + keys
 
   lang_fp = []
-  lang_li = []
 
   for [lang, lang_name] from LANG
     fp = join(I18N,lang,'i18n.nt')
@@ -100,8 +99,7 @@ export default main = =>
     r = merge r
     # console.log decode r
     name = urle hash128 r
-    lang_fp.push name
-    lang_li.push([lang,lang_name])
+    lang_fp[lang] = name
     write(
       join PUBLIC_I18N, name
       r
@@ -112,8 +110,7 @@ export default main = =>
       SRC, 'lib/LANG.js'
     )
     [
-      'export default '+ JSON.stringify(lang_li, null, 2)
-      'export const HASH = '+ JSON.stringify(lang_fp, null, 2)
+      'export default '+ json5.stringify(lang_fp, null, 2)
     ].concat(
       keys.map(
         (i,p)=>"export const #{SNAKE i}=#{p}"
