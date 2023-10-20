@@ -19,5 +19,5 @@ console.log deps ROOT
 output :
 
 ```
-./out.txt
+[ '@w5/read', '@w5/uridir' ]
 ```

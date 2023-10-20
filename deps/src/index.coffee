@@ -10,6 +10,7 @@
   } = JSON.parse read(
     join root,'package.json'
   )
+  node_modules = []
   for pkg from [
     dependencies
     devDependencies
