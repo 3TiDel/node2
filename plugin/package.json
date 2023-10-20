@@ -19,6 +19,7 @@
   "scripts": {},
   "type": "module",
   "dependencies": {
+    "@8n/deps": "^0.0.5",
     "@8n/i18n": "^0.0.13",
     "@8n/lang": "^0.0.9",
     "@8n/nt": "^0.0.12",
