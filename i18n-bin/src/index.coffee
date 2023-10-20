@@ -29,16 +29,18 @@
       )
 
   li.pop()
-  write(
-    join(public_dir, 'lang')
-    u8merge ...li
-  )
 
   site_fp = join pwd, 'site.nt'
   if existsSync site_fp
     site = load site_fp
   else
     site = {}
+
+  site.lang = li
+  write(
+    join public_dir, 'site'
+    pack site
+  )
 
   li = []
   for lang from lang_set
@@ -59,10 +61,7 @@
       g = {}
     write(
       join public_dir, lang, '_'
-      pack [
-        g
-        site
-      ]
+      pack g
     )
   # 编译 nt
   # for f from file_li
