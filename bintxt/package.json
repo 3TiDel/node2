@@ -1,6 +1,6 @@
 {
   "name": "@8n/bintxt",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": "https://github.com/i18n-site/node.git",
   "homepage": "https://github.com/i18n-site/node/tree/main/bintxt",
   "author": "i18n.site@gmail.com",
@@ -14,5 +14,8 @@
   ],
   "devDependencies": {},
   "scripts": {},
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@w5/utf8": "^0.0.3"
+  }
 }
