@@ -1,4 +1,4 @@
-> @w5/vite-conf/sveltePreprocess.js
+> @w5/vite-base/sveltePreprocess.js
   @w5/read
   @w5/snake > SNAKE
   chalk
