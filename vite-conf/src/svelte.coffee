@@ -86,6 +86,8 @@ svelte = (txt)=>
     r[script_line] += js.join(';')
 
   r = r.join('\n')
+
+  # console.log r
   return r
 
 < (dir)=>
