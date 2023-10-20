@@ -36,7 +36,7 @@
   else
     site = {}
 
-  site.lang = li
+  site.lang = u8merge li
   write(
     join public_dir, 'site'
     pack site
