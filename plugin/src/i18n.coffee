@@ -1,6 +1,7 @@
 #!/usr/bin/env coffee
 
 > ./conf.js > ROOT
+  json5
   @8n/lang/NOSPACE.js
   fs > readdirSync rmSync existsSync
   path > join
