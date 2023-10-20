@@ -6,7 +6,7 @@ rsync -av --include='*/' \
   --include='*.mjs' \
   --exclude=* src/ lib/ &
 
-bunx cep -o lib -c src &
+bun x cep -o lib -c src &
 
 wait || \
   {

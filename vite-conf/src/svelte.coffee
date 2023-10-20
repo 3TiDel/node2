@@ -69,16 +69,16 @@ svelte = (txt)=>
       if not auto_import.has i
         js.push IMPORT[i]
 
-    if pug_i18n.length
-      import_var = []
-      for i from pug_i18n
-        si = SNAKE i
-        import_var.push si
-        var_li.push i+'$'
-        dict_li.push i+'$=o['+si+']'
-      js.push "import {#{import_var.join(',')}} from '~/lib/LANG.js'"
+    import_var = []
+    for i from pug_i18n
+      si = SNAKE i
+      import_var.push si
+      var_li.push i+'$'
+      dict_li.push i+'$=o['+si+']'
 
+    js.push "import {#{import_var.join(',')}} from '~/lib/LANG.js'"
     js.push "`var #{var_li.join(',')}='';onMount(onI18n(o=>{#{dict_li.join(';')}}))`"
+    console.log js.join(';\n')
     r[script_line] += js.join(';')
 
   # console.log(r.join('\n'))
