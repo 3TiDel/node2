@@ -24,13 +24,18 @@ IMPORT[IMPORT_onI18n] = 'import onI18n from \'@8p/lang/onMount.js\''
 svelte = (txt)=>
   r = []
 
-  + in_script, in_pug, script_line
+  + in_script, in_pug, script_line, in_style
 
   pug_i18n = new Set
   auto_import = new Set
 
   for line, pos in txt.split '\n'
-    if in_script
+    if in_style
+      if line.startsWith '</style>'
+        in_style = false
+    else if line.startsWith '<style'
+      in_style = true
+    else if in_script
       if line.startsWith '</script>'
         import_li = []
         for i from auto_import
@@ -62,7 +67,6 @@ svelte = (txt)=>
             pug_i18n.add s1
             ' {@html '+s1+'$}'
         )
-
     else if line.startsWith '<script'
       in_script = true
       script_line = pos
@@ -107,7 +111,7 @@ svelte = (txt)=>
       if filename.endsWith '.svelte'
         console.log greenBright filename.slice(len)
         return {
-          code: svelte(content)
+          code: svelte(content, filename)
         }
       return
   )

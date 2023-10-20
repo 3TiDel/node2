@@ -5,6 +5,12 @@
 < (dir)=>
   svelte(dir)
   conf = (await ViteBase(dir))()
+  # console.log conf.optimizeDeps
+  # # conf.optimizeDeps.entries = [
+  #   # './src/index.coffee'
+  #   # './node_modules/@8p/full/Full.svelte'
+  # # ]
+  # console.log conf.optimizeDeps
   # for p from [
   #   '@8p/i18n'
   # ]
