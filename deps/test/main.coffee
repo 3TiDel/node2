@@ -2,7 +2,8 @@
 
 > @8n/deps
   @w5/uridir
+  path > dirname
 
-ROOT = uridir(import.meta)
+ROOT = dirname uridir(import.meta)
 
 console.log deps ROOT
