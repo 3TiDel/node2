@@ -1,6 +1,9 @@
 > @w5/vite-conf/sveltePreprocess.js
   @w5/read
   @w5/snake > SNAKE
+  chalk
+
+{greenBright} = chalk
 
 IMPORT_onMount = 1
 IMPORT_onI18n = 2
@@ -40,7 +43,7 @@ svelte = (txt)=>
         in_pug = false
       else
         line = line.replace(
-          /:>(.*)(\s|\))/g
+          /:>([^\s]*)(\s|\))/g
           (_,s1,s2)=>
             pug_i18n.add s1
             ':'+s1+'$'+s2
@@ -82,14 +85,15 @@ svelte = (txt)=>
     js.push "`onMount(onI18n(o=>{#{dict_li.join(';')}}))`"
     r[script_line] += js.join(';')
 
-  return r.join('\n')
+  r = r.join('\n')
+  return r
 
 < (dir)=>
   len = dir.length + 1
   sveltePreprocess.unshift(
     markup: ({content, filename})=>
       if filename.endsWith '.svelte'
-        console.log filename.slice(len)
+        console.log greenBright filename.slice(len)
         return {
           code: svelte(content)
         }
