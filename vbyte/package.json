@@ -3,7 +3,7 @@
   "dependencies": {},
   "devDependencies": {
     "source-map-support": "^0.5.21",
-    "@w5/loader": "^0.0.3",
+    "@w5/loader": "^0.0.5",
     "wasm-opt": "^1.4.0"
   }
 }
