@@ -78,11 +78,11 @@ svelte = (txt)=>
       si = SNAKE i
       import_var.push si
       var_li.push i+'$'
-      dict_li.push i+'$=o['+si+']'
+      dict_li.push i+'$=this['+si+']'
 
     js.push "import {#{import_var.join(',')}} from '~/lib/LANG.js'"
     js.push "#{var_li.join('=')}=''"
-    js.push "`onMount(onI18n(o=>{#{dict_li.join(';')}}))`"
+    js.push "`onMount(onI18n(function(){#{dict_li.join(';')}}))`"
     r[script_line] += js.join(';')
 
   r = r.join('\n')
