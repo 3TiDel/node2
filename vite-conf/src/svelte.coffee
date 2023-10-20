@@ -62,6 +62,7 @@ svelte = (txt)=>
     var_li = []
     dict_li = []
 
+    # 已经 auto_import 了
     if not r[script_line].endsWith('>')
       js.push ''
 
@@ -77,18 +78,21 @@ svelte = (txt)=>
       dict_li.push i+'$=o['+si+']'
 
     js.push "import {#{import_var.join(',')}} from '~/lib/LANG.js'"
-    js.push "`var #{var_li.join(',')}='';onMount(onI18n(o=>{#{dict_li.join(';')}}))`"
-    console.log js.join(';\n')
+    js.push "#{var_li.join('=')}=''"
+    js.push "`onMount(onI18n(o=>{#{dict_li.join(';')}}))`"
     r[script_line] += js.join(';')
 
-  # console.log(r.join('\n'))
   return r.join('\n')
 
-sveltePreprocess.unshift(
-  markup: ({content, filename})=>
-    if filename.endsWith '.svelte'
-      return {
-        code: svelte(content)
-      }
-    return
-)
+< (dir)=>
+  len = dir.length + 1
+  sveltePreprocess.unshift(
+    markup: ({content, filename})=>
+      if filename.endsWith '.svelte'
+        console.log filename.slice(len)
+        return {
+          code: svelte(content)
+        }
+      return
+  )
+  return

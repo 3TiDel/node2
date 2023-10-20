@@ -1,8 +1,9 @@
-> ./svelte.js:
+> ./svelte.js
   @w5/vite-conf
   path > join
 
 < (dir)=>
+  svelte(dir)
   conf = (await ViteConf(dir))()
   # for p from [
   #   '@8p/i18n'
