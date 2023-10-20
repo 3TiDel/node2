@@ -1,22 +1,9 @@
 #!/usr/bin/env coffee
 > ./conf.js > ROOT
   path > join
-  @w5/read
+  @8n/deps
 
 export node_modules = join ROOT,'node_modules'
 
-{
-  devDependencies
-  dependencies
-} = JSON.parse read(
-  join ROOT,'package.json'
-)
-
-export default NODE_MODULES = []
-
-for pkg from [
-  dependencies
-  devDependencies
-]
-  NODE_MODULES.push ... Object.keys(pkg)
+export default NODE_MODULES = deps(ROOT)
 
