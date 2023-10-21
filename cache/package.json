@@ -17,6 +17,6 @@
   "type": "module",
   "dependencies": {
     "@w5/msgpack": "^0.0.2",
-    "@8n/binmap": "^0.0.4"
+    "@3-/jsmap": "^0.0.1"
   }
 }

@@ -1,11 +1,11 @@
 > @w5/msgpack > pack
-  @8n/binmap > BinMap
+  @3-/jsmap > JsMap
 
 
 AsyncFunction = Object.getPrototypeOf(`async ()=>{}`).constructor
 
 < (func)=>
-  cache = new BinMap
+  cache = new JsMap
   if func instanceof AsyncFunction
     (args...)=>
       key = pack(args)

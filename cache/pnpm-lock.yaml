@@ -5,7 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
-  '@8n/binmap':
+  '@3-/jsmap':
     specifier: ^0.0.4
     version: 0.0.4
   '@w5/msgpack':
@@ -14,7 +14,7 @@ dependencies:
 
 packages:
 
-  /@8n/binmap@0.0.4:
+  /@3-/jsmap@0.0.4:
     resolution: {integrity: sha512-Q7xGT4PjRMjDe3BMZHyRgPgjRsvPj3R7Z3dcpwDqw6jgUrsd49agA1e9XxBzCMePCmuYQMdpXMwpXKLbD1uF+A==}
     dev: false
 
