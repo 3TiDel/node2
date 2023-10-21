@@ -1,5 +1,5 @@
 > path > join
-  @w5/xxhash3-wasm > hash128
+  @3-/xxhash3 > hash128
   fs > readFileSync
   base-x
 

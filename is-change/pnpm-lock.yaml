@@ -20,7 +20,7 @@ dependencies:
   '@w5/write':
     specifier: ^0.0.1
     version: 0.0.1
-  '@w5/xxhash3-wasm':
+  '@3-/xxhash3':
     specifier: ^0.0.6
     version: 0.0.6
 
@@ -107,7 +107,7 @@ packages:
     resolution: {integrity: sha512-VyQXX2C3yRqfS7D5B+yCcsR1tvzZ1DzPLi5kugBOe/EeL+LOD3ftFamfik7wQr2TG7XQ7VF0snUpqVLaytwfOA==}
     dev: false
 
-  /@w5/xxhash3-wasm@0.0.6:
+  /@3-/xxhash3@0.0.6:
     resolution: {integrity: sha512-mP+pfMV6StrN3FLHbPydwjmB9aTllAmtbcZ7ZeLW/2hzkZ4Q/58xQbxgdwDvmaN8HNXZqjE6x9qWmhUxbvjG5Q==}
     dev: false
 

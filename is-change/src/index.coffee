@@ -3,7 +3,7 @@
 > @w5/binmap > BinMap
   @w5/u8 > u8eq
   @w5/write
-  @w5/xxhash3-wasm > hash128
+  @3-/xxhash3 > hash128
   @8n/cache
   @8n/vbyte > vbyteE
   fs > statSync readFileSync existsSync

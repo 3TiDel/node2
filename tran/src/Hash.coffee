@@ -1,7 +1,7 @@
 #!/usr/bin/env coffee
 
 > @w5/utf8/utf8e.js
-  @w5/xxhash3-wasm > hash128
+  @3-/xxhash3 > hash128
 
 < (txt)=>
   txt = utf8e txt

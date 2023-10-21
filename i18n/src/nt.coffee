@@ -1,5 +1,5 @@
 > @8n/tran
-  @w5/xxhash3-wasm > hash128
+  @3-/xxhash3 > hash128
   @8n/cache
   @w5/bar:Bar
   @8n/cache_map:CacheMap

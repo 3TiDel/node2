@@ -13,7 +13,7 @@
   @8n/i18n
   @w5/u8 > u8eq
   @8n/lang:LANG
-  @w5/xxhash3-wasm > hash128
+  @3-/xxhash3 > hash128
   @w5/snake > SNAKE
 #   @w5/utf8/utf8d.js
 #
