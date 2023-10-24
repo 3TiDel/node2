@@ -6,4 +6,4 @@
 
 # ROOT = uridir(import.meta)
 
-console.log await mark 123
+console.log mark "# 测试 <br _tex23x> <br>"
